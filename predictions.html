@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Predictions</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <h1>Football Predictions</h1>
+    <h3 id="welcomeMsg"></h3>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <form id="predictionForm">
+        <input type="text" id="match" placeholder="Match (e.g. Man Utd vs Chelsea)" required />
+        <input type="text" id="score" placeholder="Your Prediction (e.g. 2-1)" required />
+        <button type="submit">Submit Prediction</button>
+    </form>
+
+    <div id="statusMessage"></div>
+
+    <ul id="predictionList"></ul>
+
+    <script src="predictions.js" type="module"></script>
+</body>
+</html>
